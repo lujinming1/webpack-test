@@ -509,14 +509,16 @@ function updateLink (link, options, obj) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__layer_less__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__layer_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__layer_less__);
-//import tpl from './layer.html'
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__layer_html__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__layer_html___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__layer_html__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layer_less__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layer_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__layer_less__);
+
 
 function layer() {
   return {
     name: 'layer',
-    tpl: tpl
+    tpl: __WEBPACK_IMPORTED_MODULE_0__layer_html___default.a
 
   };
 }
@@ -544,8 +546,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/postcss-loader/lib/index.js??ref--1-2!./common.css", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js??ref--1-1!../../node_modules/postcss-loader/lib/index.js??ref--1-2!./common.css");
+		module.hot.accept("!!../../node_modules/css-loader/index.js??ref--2-1!../../node_modules/postcss-loader/lib/index.js??ref--2-2!./common.css", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js??ref--2-1!../../node_modules/postcss-loader/lib/index.js??ref--2-2!./common.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -663,6 +665,12 @@ function App() {
   const NUM = 1;
   alert(NUM);
   console.log(__WEBPACK_IMPORTED_MODULE_1__components_layer_layer_js__["a" /* default */]);
+
+  var dom = document.getElementById('app');
+  var layer = new __WEBPACK_IMPORTED_MODULE_1__components_layer_layer_js__["a" /* default */]();
+  console.log(layer.tpl);
+  console.log(dom);
+  dom.innerHTML = layer.tpl;
 }
 
 new App();
@@ -690,13 +698,21 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "html,body {\n  padding:0;\n  margin:0;\n  background-color:red;\n}\n\nul, li {\n  padding: 0;\n  margin: 0;\n  list-style: none;\n}\n\n.flex-dev {\n  display:-webkit-box;\n  display:-ms-flexbox;\n  display:flex;\n\n}\n", ""]);
+exports.push([module.i, "html,body {\n  padding:0;\n  margin:0;\n  background-color:red;\n}\n\nul, li {\n  padding: 0;\n  margin: 0;\n  list-style: none;\n}\n\n._1TiQ_5fH6XGVcb79MlQ5uk {\n  display:-webkit-box;\n  display:-ms-flexbox;\n  display:flex;\n\n}\n", ""]);
 
 // exports
-
+exports.locals = {
+	"flex-dev": "_1TiQ_5fH6XGVcb79MlQ5uk"
+};
 
 /***/ }),
 /* 8 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"layer\">\n  <div>this is a layer</div>\n</div>\n";
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -716,8 +732,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js??ref--2-1!../../../node_modules/postcss-loader/lib/index.js??ref--2-2!../../../node_modules/less-loader/dist/index.js!./layer.less", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js??ref--2-1!../../../node_modules/postcss-loader/lib/index.js??ref--2-2!../../../node_modules/less-loader/dist/index.js!./layer.less");
+		module.hot.accept("!!../../../node_modules/css-loader/index.js??ref--3-1!../../../node_modules/postcss-loader/lib/index.js??ref--3-2!../../../node_modules/less-loader/dist/index.js!./layer.less", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js??ref--3-1!../../../node_modules/postcss-loader/lib/index.js??ref--3-2!../../../node_modules/less-loader/dist/index.js!./layer.less");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});

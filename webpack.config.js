@@ -14,12 +14,17 @@ module.exports={
         loader:'babel-loader'
       },
       {
+        test:/\.html$/,
+        loader:'html-loader'
+      },
+      {
         test:/\.css$/,
         use:[
           'style-loader',
           {
             loader:'css-loader',
             options:{
+              modules: true,
               importLoaders:1
             }
           },
@@ -40,6 +45,7 @@ module.exports={
           {
             loader:'css-loader',
             options:{
+
               importLoaders:1
             }
           },
@@ -62,7 +68,7 @@ module.exports={
     new htmlWebpackPlugin({
       filename: 'index.html',
       template:'index.html',
-      inject:'head',
+      inject:'body',
     //  minify:'' 压缩
   })
 
