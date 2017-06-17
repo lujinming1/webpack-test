@@ -25,12 +25,11 @@
 })
 ]`
 报错原因为:将js文件插入到了` <head> `标签中了，此时取不到id为app的` <div> `标签。应将配置文件中的 *inject* 设为 *body*，即
-`  plugins:[
+`plugins:[
     new htmlWebpackPlugin({
       filename: 'index.html',
       template:'index.html',
       inject:'body',
     //  minify:'' 压缩
   })
-
   ]`
